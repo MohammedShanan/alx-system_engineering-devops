@@ -1,1 +1,2 @@
-0   string   SCHOOL* school data
+#!/bin/bash
+cat file_school0
