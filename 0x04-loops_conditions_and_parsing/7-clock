@@ -7,7 +7,7 @@ do
     echo "Hour: $i"
     ((i++))
     j=1
-    while ((j < 60))
+    while ((j <= 59))
     do
 	echo "$j"
 	(( j++ ))
