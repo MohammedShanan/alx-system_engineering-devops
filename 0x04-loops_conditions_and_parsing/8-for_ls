@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# Script lists content in current directory without initial #- in filenames
 files="$(ls)"
 for f in $files
 do
