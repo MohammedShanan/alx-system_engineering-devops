@@ -1,0 +1,16 @@
+
+defaults
+mode http
+timeout client 15s
+timeout connect 10s
+timeout server 15s
+timeout http-request 10s
+
+frontend shanan.tech
+bind *:80
+default_backend shanan.tech
+
+backend shanan.tech
+balance roundrobin
+server 173893-web-01 35.175.134.97:80 check
+server 173893-web-02 54.197.83.206:80 check
