@@ -41,7 +41,7 @@ frontend shanan-frontend
         default_backend shanan-backend
 
 frontend shanan-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/shanan.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.shanan.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend shanan-backend
 
