@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Returns information about employee ID TODOlist progress"""
+"""
+Module 0-gather_data_from_an_API.py
 
+Returns information about employee ID _TODO list progress
+"""
 
 import requests
 import sys
