@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-Module 1-export_to_CSV.py
-Returns information about employee ID TODO list progress in a csv file
+Module 2-export_to_JSON.py
+Returns information about employee ID TODO list progress in a json file
 """
-import csv
+
+import json
 import requests
 import sys
 
@@ -18,10 +19,14 @@ if __name__ == "__main__":
     user = user_response.json()
     todos = todos_response.json()
     username = user.get("username")
+    tasks_list = []
+    for task in todos:
+        task_dict = {
+            "task": task.get("title"),
+            "completed": task.get("completed"),
+            "username": username,
+        }
+        tasks_list.append(task_dict)
 
-    with open(f"{employee_id}.csv", mode="w", newline="") as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
-        for task in todos:
-            writer.writerow(
-                [employee_id, username, task.get("completed"), task.get("title")]
-            )
+    with open(f"{employee_id}.json", mode="w", newline="") as file:
+        json.dump({str(employee_id): tasks_list}, file)
