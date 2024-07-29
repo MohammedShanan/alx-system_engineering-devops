@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Module 1-export_to_CSV.py
-
 Returns information about employee ID TODO list progress in a csv file
 """
 import csv

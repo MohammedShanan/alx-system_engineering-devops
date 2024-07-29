@@ -17,7 +17,7 @@ if __name__ == "__main__":
     todos_response = requests.get(f"{url}todos", params={"userId": employee_id})
     user = user_response.json()
     todos = todos_response.json()
-    completed_tasks = list(filter(lambda x: x.get('"completed"'), todos))
+    completed_tasks = list(filter(lambda x: x.get('completed'), todos))
     print(
         f"Employee {user.get('name')} is done with tasks({len(completed_tasks)}/{len(todos)}):"
     )
