@@ -22,6 +22,9 @@ if __name__ == "__main__":
     with open(f"{employee_id}.csv", mode="w", newline="") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
-            writer.writerow(
-                [employee_id, username, task.get("completed"), task.get("title")]
-            )
+            writer.writerow([
+                employee_id,
+                username,
+                task.get('completed'),
+                task.get('title')
+            ])
