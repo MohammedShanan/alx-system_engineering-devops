@@ -21,4 +21,5 @@ if __name__ == "__main__":
     print(
         f"Employee {user.get('name')} is done with tasks({len(completed_tasks)}/{len(todos)}):"
     )
-    list(map(lambda x: print(f'\t {x.get('title')}'), completed_tasks))
+    for task in completed_tasks:
+        print(f'\t {task.get('title')}')

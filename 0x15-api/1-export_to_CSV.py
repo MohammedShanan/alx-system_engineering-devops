@@ -18,14 +18,11 @@ if __name__ == "__main__":
     user = user_response.json()
     todos = todos_response.json()
     filename = f"{employee_id}.csv"
-    with open(filename, "w", newline="") as file:
+    username = user.get("username")
+
+    with open(f"{employee_id}.csv", mode="w", newline="") as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in todos:
             writer.writerow(
-                [
-                    employee_id,
-                    user.get("name"),
-                    task.get("completed"),
-                    task.get("title"),
-                ]
+                [employee_id, username, task.get("completed"), task.get("title")]
             )
