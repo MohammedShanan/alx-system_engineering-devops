@@ -14,7 +14,9 @@ if __name__ == "__main__":
         sys.exit(1)
     url = "https://jsonplaceholder.typicode.com/"
     user_response = requests.get(f"{url}users/{employee_id}")
-    todos_response = requests.get(f"{url}todos", params={"userId": employee_id})
+    todos_response = requests.get(
+        f"{url}todos", params={"userId": employee_id}
+        )
     user = user_response.json()
     todos = todos_response.json()
     completed_tasks = list(filter(lambda x: x.get("completed"), todos))
