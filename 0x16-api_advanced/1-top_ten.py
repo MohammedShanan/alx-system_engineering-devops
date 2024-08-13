@@ -9,7 +9,7 @@ def top_ten(subreddit):
     headers = {"User-Agent": "u/trigun"}
     params = {"limit": 10}
     response = requests.get(url, headers=headers, 
-                            params=params, allow_redirects=False)
+                        params=params, allow_redirects=False)
 
     if response.status_code == 200:
         results = response.json().get("data")
