@@ -15,7 +15,7 @@ Postmortem
 - **Misleading Paths:**
   - Initially thought the issue might be related to server settings or updates.
 - **Escalation:** Senior engineers were engaged to lead the investigation.
-- **Resolution:** A script was run on the server to correct the typo in the configuration file at 12:14 AM CAT, restoring the website.
+- **Resolution:** A script was run on the server to correct the typo in the configuration file at 12:15 AM CAT, restoring the website.
 
 **Root Cause and Resolution:**
 
